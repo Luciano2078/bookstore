@@ -9,6 +9,7 @@ python = "^3.10"
 pytest = "^6.2.5"
 factory-boy = "^3.2.1"
 Django = "^4.0"
+django-rest-framework = "^0.1.0"
 
 [tool.poetry.dev-dependencies]
 
