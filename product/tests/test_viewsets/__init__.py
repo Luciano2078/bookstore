@@ -1,0 +1,2 @@
+from .test_category_viewset import TestCategoryViewSet
+from .test_product_viewset import TestProductViewSet
