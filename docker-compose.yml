@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   db:
-    image: postgres:13.0-alpine
+    image: postgres:14
     ports:
       - 5432:5432
     volumes:
@@ -11,24 +11,18 @@ services:
       - POSTGRES_USER=bookstore_dev
       - POSTGRES_PASSWORD=bookstore_dev
       - POSTGRES_DB=bookstore_dev_db
-    networks:
-      - backend
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - . :/usr/src/app/
+      - app_data:/usr/src/app/
     ports:
       - 8000:8000
     env_file:
       - ./env.dev
-    networks:
-      - backend
     depends_on:
       - db
-networks:
-  backend:
-    driver: bridge
-    
+
 volumes:
   postgres_data:
+  app_data:
