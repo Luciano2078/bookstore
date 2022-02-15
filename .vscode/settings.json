@@ -5,7 +5,8 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "cSpell.words": [
-        "pytest"
+        "pytest",
+        "wsgi"
     ],
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "file:///d%3A/Projetos/bookstore/.github/workflows/build.yml"
